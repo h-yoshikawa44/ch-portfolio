@@ -17,7 +17,9 @@
     "prepare": "simple-git-hooks || echo 'Can not set git hooks'"
   },
   "dependencies": {
+    "@emotion-icons/fa-brands": "^3.19.0",
     "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
     "modern-css-reset": "^1.4.0",
     "next": "12.0.4",
     "react": "17.0.2",
