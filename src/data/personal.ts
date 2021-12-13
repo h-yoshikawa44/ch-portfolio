@@ -34,7 +34,19 @@ const personal: Personal = {
       skillName: 'Next.js',
     },
   ],
-  hobbies: [],
+  hobbies: [
+    {
+      img: '/hobbies/game.png',
+      title: 'Game',
+      description: 'I like to watch people play games and play them myself.',
+    },
+    {
+      img: '/hobbies/illust.png',
+      title: 'Illust',
+      description:
+        "I sometimes draw pictures. (I'd like to study it properly sooner or later.)",
+    },
+  ],
 };
 
 export { personal };
