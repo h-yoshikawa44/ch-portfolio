@@ -1,18 +1,24 @@
 import { VFC } from 'react';
 import Image from 'next/image';
 import { css } from '@emotion/react';
+import { Profile, SocialAccount as SocialAccountType } from '@/models/Personal';
 import Paper from '@/components/common/Paper';
 import SocialAccount from '@/components/common/SocialAccount';
 import { breakPoint, fonts, colors } from '@/styles/constants';
 
-const PersonalProfile: VFC = () => {
+type Props = {
+  profile: Profile;
+  socialAccounts: SocialAccountType[];
+};
+
+const PersonalProfile: VFC<Props> = ({ profile, socialAccounts }) => {
   return (
     <section>
       <Paper>
         <div css={profileCardLayout}>
           <p css={profileImgBlock}>
             <Image
-              src="/personal/my-icon.png"
+              src={profile.icon}
               alt="My Icon"
               layout="fill"
               objectFit="contain"
@@ -21,32 +27,22 @@ const PersonalProfile: VFC = () => {
           <div css={profileTextBlock}>
             <div css={profileHeader}>
               <div>
-                <h2 css={profileName}>Hitomi Yoshikawa</h2>
-                <small css={profileRole}>Web Developer</small>
+                <h2 css={profileName}>{profile.name}</h2>
+                <small css={profileRole}>{profile.role}</small>
               </div>
               <ul css={profileAccountList}>
-                <li css={[profileAccount, profileAccountMargin]}>
-                  <SocialAccount
-                    type="github"
-                    iconSize={24}
-                    accountID="h-yoshilawa44"
-                  />
-                </li>
-                <li css={profileAccount}>
-                  <SocialAccount
-                    type="twitter"
-                    iconSize={24}
-                    accountID="yoshi44_lion"
-                  />
-                </li>
+                {socialAccounts.map((account) => (
+                  <li key={account.type} css={profileAccount}>
+                    <SocialAccount
+                      type={account.type}
+                      iconSize={24}
+                      accountID={account.accountId}
+                    />
+                  </li>
+                ))}
               </ul>
             </div>
-            <p css={profileDescription}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-              sapiente earum totam explicabo saepe perferendis ipsa nulla
-              asperiores, rem hic in obcaecati exercitationem nisi molestias
-              magnam ratione tempora unde assumenda.
-            </p>
+            <p css={profileDescription}>{profile.description}</p>
           </div>
         </div>
       </Paper>
@@ -118,21 +114,17 @@ const profileAccountList = css`
 `;
 
 const profileAccount = css`
+  margin-bottom: 4px;
   font-family: ${fonts.montserrat};
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 22px;
   color: ${colors.gray2};
-`;
 
-const profileAccountMargin = css`
-  margin-bottom: 4px;
-`;
-
-const profileAccountId = css`
-  display: inline-block;
-  margin-left: 8px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const profileDescription = css`

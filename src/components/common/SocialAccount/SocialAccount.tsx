@@ -2,9 +2,10 @@ import { VFC, Fragment } from 'react';
 import { css } from '@emotion/react';
 import { Github } from '@emotion-icons/fa-brands/Github';
 import { Twitter } from '@emotion-icons/fa-brands/Twitter';
+import { SocialType } from '@/models/Personal';
 
 type Props = {
-  type: 'github' | 'twitter';
+  type: SocialType;
   iconSize: number;
   accountID: string;
 };
