@@ -1,54 +1,61 @@
 import { VFC } from 'react';
 import Image from 'next/image';
 import { css } from '@emotion/react';
-import { Github } from '@emotion-icons/fa-brands/Github';
-import { Twitter } from '@emotion-icons/fa-brands/Twitter';
+import Paper from '@/components/common/Paper';
+import SocialAccount from '@/components/common/SocialAccount';
 import { breakPoint, fonts, colors } from '@/styles/constants';
 
 const PersonalProfile: VFC = () => {
   return (
-    <section css={profileCard}>
-      <p css={profileImgBlock}>
-        <Image
-          src="/personal/my-icon.png"
-          alt="My Icon"
-          layout="fill"
-          objectFit="contain"
-        ></Image>
-      </p>
-      <div css={profileTextBlock}>
-        <div css={profileHeader}>
-          <div>
-            <h2 css={profileName}>Hitomi Yoshikawa</h2>
-            <small css={profileRole}>Web Developer</small>
+    <section>
+      <Paper>
+        <div css={profileCardLayout}>
+          <p css={profileImgBlock}>
+            <Image
+              src="/personal/my-icon.png"
+              alt="My Icon"
+              layout="fill"
+              objectFit="contain"
+            />
+          </p>
+          <div css={profileTextBlock}>
+            <div css={profileHeader}>
+              <div>
+                <h2 css={profileName}>Hitomi Yoshikawa</h2>
+                <small css={profileRole}>Web Developer</small>
+              </div>
+              <ul css={profileAccountList}>
+                <li css={[profileAccount, profileAccountMargin]}>
+                  <SocialAccount
+                    type="github"
+                    iconSize={24}
+                    accountID="h-yoshilawa44"
+                  />
+                </li>
+                <li css={profileAccount}>
+                  <SocialAccount
+                    type="twitter"
+                    iconSize={24}
+                    accountID="yoshi44_lion"
+                  />
+                </li>
+              </ul>
+            </div>
+            <p css={profileDescription}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+              sapiente earum totam explicabo saepe perferendis ipsa nulla
+              asperiores, rem hic in obcaecati exercitationem nisi molestias
+              magnam ratione tempora unde assumenda.
+            </p>
           </div>
-          <ul css={profileAccountList}>
-            <li css={[profileAccount, profileAccountMargin]}>
-              <Github size={24} />
-              <span css={profileAccountId}>@h-yoshilawa44</span>
-            </li>
-            <li css={profileAccount}>
-              <Twitter size={24} />
-              <span css={profileAccountId}>@yoshi44_lion</span>
-            </li>
-          </ul>
         </div>
-        <p css={profileDescription}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          sapiente earum totam explicabo saepe perferendis ipsa nulla
-          asperiores, rem hic in obcaecati exercitationem nisi molestias magnam
-          ratione tempora unde assumenda.
-        </p>
-      </div>
+      </Paper>
     </section>
   );
 };
 
-const profileCard = css`
+const profileCardLayout = css`
   display: flex;
-  padding: 24px;
-  background-color: #fff;
-  border-radius: 12px;
 
   @media (max-width: ${breakPoint.sm - 1}px) {
     flex-direction: column;
