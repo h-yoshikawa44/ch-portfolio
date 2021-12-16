@@ -13,7 +13,7 @@ const PersonalSkill: VFC<Props> = ({ skills }) => {
   return (
     <section>
       <Paper>
-        <h2 css={skillTitle}>Skill</h2>
+        <h2 css={skillSectionTitle}>Skill</h2>
         <ul css={skillList}>
           {skills.map((skill) => (
             <li key={skill.skillName} css={skillListItem}>
@@ -32,7 +32,7 @@ const PersonalSkill: VFC<Props> = ({ skills }) => {
   );
 };
 
-const skillTitle = css`
+const skillSectionTitle = css`
   font-family: ${fonts.montserrat};
   font-size: 18px;
   font-style: normal;
