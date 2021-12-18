@@ -17,11 +17,16 @@
     "prepare": "simple-git-hooks || echo 'Can not set git hooks'"
   },
   "dependencies": {
+    "@emotion-icons/fa-brands": "^3.19.0",
     "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "csx": "^10.0.2",
+    "focus-visible": "^5.2.0",
     "modern-css-reset": "^1.4.0",
     "next": "12.0.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "rss-parser": "^3.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
