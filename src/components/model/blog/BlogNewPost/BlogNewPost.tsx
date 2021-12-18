@@ -10,8 +10,6 @@ type Props = {
 };
 
 const BlogNewPost: VFC<Props> = ({ blog }) => {
-  console.log(blog);
-  console.log(blog.title);
   return (
     <section>
       <Paper>
