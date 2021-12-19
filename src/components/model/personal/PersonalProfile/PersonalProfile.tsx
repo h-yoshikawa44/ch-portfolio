@@ -113,7 +113,7 @@ const profileAccountList = css`
   margin: 0;
   list-style: none;
 
-  @media (max-width: ${breakPoint.sm - 1}px) {
+  @media (max-width: ${breakPoint.md - 1}px) {
     margin-top: 16px;
   }
 `;
@@ -141,7 +141,7 @@ const profileDescription = css`
   line-height: 22px;
   color: ${colors.gray3};
 
-  @media (max-width: ${breakPoint.sm - 1}px) {
+  @media (max-width: ${breakPoint.md - 1}px) {
     margin-top: 20px;
   }
 `;
