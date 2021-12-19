@@ -8,14 +8,19 @@ import BlogNewPost from '@/components/model/blog/BlogNewPost';
 import ProjectHeader from '@/components/model/personal/PersonalProjectHeader';
 import PersonalProject from '@/components/model/personal/PersonalProject';
 import Footer from '@/components/common/Footer';
-import { personal } from '@/data/personal';
 import { colors } from '@/styles/constants';
+import { personal, tags } from '@/data/personal';
+import useProjectFilter from '@/hooks/useProjectFilter';
 
 type Props = {
   blog: Blog;
 };
 
 const Home: VFC<Props> = ({ blog }) => {
+  const { filter, filterProjects, handleChangeFilter } = useProjectFilter(
+    personal.projects
+  );
+
   return (
     <div>
       <main css={main}>
@@ -38,16 +43,15 @@ const Home: VFC<Props> = ({ blog }) => {
           </div>
           <section css={projectSectionMargin}>
             <ProjectHeader
-              count={personal.projects.length}
-              tags={['HTML', 'CSS', 'emotion']}
+              count={filterProjects.length}
+              tags={tags}
+              filter={filter}
+              onFilter={handleChangeFilter}
             />
             <div
-              css={[
-                sectionMarginTop,
-                projectCardList(personal.projects.length),
-              ]}
+              css={[sectionMarginTop, projectCardList(filterProjects?.length)]}
             >
-              {personal.projects?.map((project) => (
+              {filterProjects?.map((project) => (
                 <PersonalProject key={project.name} project={project} />
               ))}
             </div>

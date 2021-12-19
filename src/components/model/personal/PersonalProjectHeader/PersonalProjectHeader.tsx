@@ -2,13 +2,16 @@ import { VFC } from 'react';
 import { css } from '@emotion/react';
 import Paper from '@/components/common/Paper';
 import { fonts, colors } from '@/styles/constants';
+import { createRGBAColor } from '@/lib/csx';
 
 type Props = {
   count: number;
   tags: string[];
+  filter: string;
+  onFilter: (tag: string) => void;
 };
 
-const ProjectHeader: VFC<Props> = ({ count, tags }) => {
+const ProjectHeader: VFC<Props> = ({ count, tags, filter, onFilter }) => {
   return (
     <header>
       <Paper>
@@ -16,7 +19,14 @@ const ProjectHeader: VFC<Props> = ({ count, tags }) => {
         <div css={projectTagBlock}>
           {tags &&
             tags.map((tag) => (
-              <button key={tag} css={projectTagButton}>
+              <button
+                key={tag}
+                css={[
+                  projectTagButton,
+                  filter === tag && projectTagButtonActive,
+                ]}
+                onClick={() => onFilter(tag)}
+              >
                 {tag}
               </button>
             ))}
@@ -44,6 +54,11 @@ const projectTagButtonActive = css`
   color: ${colors.white};
   background-color: ${colors.blue};
   border: 1px solid ${colors.blue};
+
+  &:hover,
+  &:focus {
+    background-color: ${colors.blue};
+  }
 `;
 
 const projectTagButton = css`
@@ -62,7 +77,8 @@ const projectTagButton = css`
 
   &:hover,
   &:focus {
-    ${projectTagButtonActive}
+    /* stylelint-disable-next-line function-name-case */
+    background-color: ${createRGBAColor(colors.black, 0.1)};
   }
 
   &:not(.focus-visible) {

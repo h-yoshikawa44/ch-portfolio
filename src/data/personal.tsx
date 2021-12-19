@@ -184,4 +184,6 @@ const personal: Personal = {
   ],
 };
 
-export { personal };
+const tags = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React'];
+
+export { personal, tags };
