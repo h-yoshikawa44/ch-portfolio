@@ -7,9 +7,10 @@ const personal: Personal = {
   icon: '/personal/my-icon.png',
   description: (
     <Fragment>
-      Web Developer。
+      フロントエンド志望のエンジニア。
       <br />
-      テスト
+      React 関連の技術（TypeScript、Next.js
+      等）に関心があり、主にその辺りを勉強しています。
     </Fragment>
   ),
   socialAccounts: [
@@ -44,13 +45,14 @@ const personal: Personal = {
     {
       img: '/hobbies/game.png',
       title: 'Game',
-      description: 'I like to watch people play games and play them myself.',
+      description:
+        'たまにポチポチやってます。エンジニアになる前は、暇さえあればゲームしてました。',
     },
     {
       img: '/hobbies/illust.png',
       title: 'Illust',
       description:
-        "I sometimes draw pictures. (I'd like to study it properly sooner or later.)",
+        'たまにイラストを描いています。いずれはちゃんと勉強して上達させたい。',
     },
   ],
   projects: [
