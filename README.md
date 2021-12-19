@@ -8,10 +8,10 @@
 
 <div align="center">
   <h3>
-    <!-- <a href="https://{your-demo-link.your-domain}">
+    <a href="https://ch-portfolio.vercel.app/">
       Demo
     </a>
-    <span> | </span> -->
+    <span> | </span>
     <!-- <a href="https://{your-url-to-the-solution}">
       Solution
     </a>
@@ -28,17 +28,23 @@
 
 - [Table of Contents](#table-of-contents)
 - [Overview](#overview)
+  - [Desktop](#desktop)
+  - [Mobile](#mobile)
   - [Built With](#built-with)
 - [Features](#features)
 - [How To Use](#how-to-use)
+- [learned/improved](#learnedimproved)
 - [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
 <!-- OVERVIEW -->
 
 ## Overview
+### Desktop
+![overview - desktop](/screenshots/desktop.png)
 
-(※in preparation)
+### Mobile
+<img src="./screenshots/mobile.png" alt="overview - mobile" width="35%">
 
 ### Built With
 
@@ -52,6 +58,9 @@ Base
 
 Other major libraries
 - [emotion](https://emotion.sh/)
+- [csx](https://typestyle.github.io/#/colors)
+- [focus-visible](https://github.com/WICG/focus-visible)
+- [rss-parser](https://github.com/rbren/rss-parser)
 
 ## Features
 
@@ -59,14 +68,14 @@ Other major libraries
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt) was to build an application to complete the given user stories.
 
-- [ ] User story: I can see personal details
-- [ ] User story: I can see skills
-- [ ] User story: I can see projects
-- [ ] User story: I can filter projects by tag
-- [ ] User story: I can see hobbies or certificates
+- [x] User story: I can see personal details
+- [x] User story: I can see skills
+- [x] User story: I can see projects
+- [x] User story: I can filter projects by tag
+- [x] User story: I can see hobbies or certificates
 - [ ] User story (optional): I can see experiences
-- [ ] User story (optional): I can see blogs
-- [ ] User story (optional): I can see projects on different pages
+- [x] User story (optional): I can see blogs
+- [x] User story (optional): I can see projects on different pages
 
 ## How To Use
 
@@ -87,11 +96,15 @@ $ yarn install
 $ yarn dev
 ```
 
+## learned/improved
+- I figured out how to build a card layout with flexbox and negative margins.
+- It turns out that RSS information can be handled as JS objects using rss-parser.
+
 ## Acknowledgements
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
 
-(※in preparation)
+- [Flexboxとネガティブマージンでカード型レイアウトを実装する方法！](https://moshashugyo.com/media/flexbox-negative-margin)
 
 ## Contact
 
