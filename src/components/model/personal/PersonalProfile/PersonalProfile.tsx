@@ -72,6 +72,7 @@ const profileImgBlock = css`
 `;
 
 const profileTextBlock = css`
+  width: 100%;
   margin-left: 24px;
 `;
 

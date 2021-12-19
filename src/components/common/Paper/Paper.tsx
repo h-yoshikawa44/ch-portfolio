@@ -6,6 +6,7 @@ const Paper: FC = ({ children }) => {
 };
 
 const paper = css`
+  height: inherit;
   padding: 24px;
   background-color: #fff;
   border-radius: 12px;

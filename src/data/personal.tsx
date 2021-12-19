@@ -139,7 +139,7 @@ const personal: Personal = {
       repoUrl: 'https://github.com/h-yoshikawa44/ch-recipe-page',
     },
     {
-      img: '/projects/devchallenges/interiorconsultant.png',
+      img: '/projects/devchallenges/interior-consultant.png',
       tags: ['HTML', 'CSS', 'JavaScript'],
       name: 'Interior Consultant',
       description: (
