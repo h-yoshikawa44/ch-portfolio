@@ -8,7 +8,7 @@ import BlogNewPost from '@/components/model/blog/BlogNewPost';
 import ProjectHeader from '@/components/model/personal/PersonalProjectHeader';
 import PersonalProject from '@/components/model/personal/PersonalProject';
 import Footer from '@/components/common/Footer';
-import { colors } from '@/styles/constants';
+import { breakPoint, colors } from '@/styles/constants';
 import { personal, tags } from '@/data/personal';
 import useProjectFilter from '@/hooks/useProjectFilter';
 
@@ -41,7 +41,7 @@ const Home: VFC<Props> = ({ blog }) => {
             </div>
             <BlogNewPost blog={blog} />
           </div>
-          <section css={projectSectionMargin}>
+          <section css={sectionMarginTop}>
             <ProjectHeader
               count={filterProjects.length}
               tags={tags}
@@ -65,31 +65,48 @@ const Home: VFC<Props> = ({ blog }) => {
 
 const main = css`
   margin: 72px 0;
+
+  @media (max-width: ${breakPoint.md - 1}px) {
+    margin: 24px 0 40px;
+  }
 `;
 
 const container = css`
   max-width: 1280px;
   padding: 0 12%;
   margin: 0 auto;
+
+  @media (max-width: ${breakPoint.md - 1}px) {
+    padding: 0 4%;
+  }
 `;
 
 const sectionMarginTop = css`
   margin-top: 42px;
+
+  @media (max-width: ${breakPoint.md - 1}px) {
+    margin-top: 24px;
+  }
 `;
 
 const centerSectionLayout = css`
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
   column-gap: 2%;
+
+  @media (max-width: ${breakPoint.md - 1}px) {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
 `;
 
 const centerSectionLeftBlockLayout = css`
   display: grid;
   row-gap: 42px;
-`;
 
-const projectSectionMargin = css`
-  margin: 42px 0;
+  @media (max-width: ${breakPoint.md - 1}px) {
+    row-gap: 24px;
+  }
 `;
 
 const projectCardList = (count: number) => {

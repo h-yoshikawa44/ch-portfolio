@@ -1,7 +1,7 @@
 import { VFC } from 'react';
 import { css } from '@emotion/react';
 import Paper from '@/components/common/Paper';
-import { fonts, colors } from '@/styles/constants';
+import { breakPoint, fonts, colors } from '@/styles/constants';
 import { createRGBAColor } from '@/lib/csx';
 
 type Props = {
@@ -47,7 +47,12 @@ const projectHeaderTitle = css`
 
 const projectTagBlock = css`
   display: flex;
-  margin-top: 16px;
+  flex-wrap: wrap;
+  margin: calc(-16px + 16px) 0 0 -16px;
+
+  @media (max-width: ${breakPoint.md - 1}px) {
+    margin: calc(-8px + 16px) 0 0 -8px;
+  }
 `;
 
 const projectTagButtonActive = css`
@@ -63,7 +68,8 @@ const projectTagButtonActive = css`
 
 const projectTagButton = css`
   padding: 8px 24px;
-  margin-right: 16px;
+  margin-top: 16px;
+  margin-left: 16px;
   font-family: ${fonts.montserrat};
   font-size: 14px;
   font-style: normal;
@@ -83,6 +89,11 @@ const projectTagButton = css`
 
   &:not(.focus-visible) {
     outline-color: transparent;
+  }
+
+  @media (max-width: ${breakPoint.md - 1}px) {
+    margin-top: 8px;
+    margin-left: 8px;
   }
 `;
 

@@ -34,10 +34,10 @@ const PersonalSkill: VFC<Props> = ({ skills }) => {
 
 const skillSectionTitle = css`
   font-family: ${fonts.montserrat};
-  font-size: 18px;
+  font-size: 24px;
   font-style: normal;
-  font-weight: bold;
-  line-height: 22px;
+  font-weight: 500;
+  line-height: 29px;
   color: ${colors.gray2};
 `;
 
