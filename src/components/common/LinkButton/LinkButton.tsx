@@ -30,7 +30,7 @@ const linkButton = css`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 40px;
+  padding: 12px 32px;
   font-family: ${fonts.montserrat};
   font-size: 18px;
   font-style: normal;

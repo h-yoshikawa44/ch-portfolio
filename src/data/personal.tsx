@@ -7,9 +7,10 @@ const personal: Personal = {
   icon: '/personal/my-icon.png',
   description: (
     <Fragment>
-      Web Developer。
+      フロントエンド志望のエンジニア。
       <br />
-      テスト
+      React 関連の技術（TypeScript、Next.js
+      等）に関心があり、主にその辺りを勉強しています。
     </Fragment>
   ),
   socialAccounts: [
@@ -44,13 +45,14 @@ const personal: Personal = {
     {
       img: '/hobbies/game.png',
       title: 'Game',
-      description: 'I like to watch people play games and play them myself.',
+      description:
+        'たまにポチポチやってます。エンジニアになる前は、暇さえあればゲームしてました。',
     },
     {
       img: '/hobbies/illust.png',
       title: 'Illust',
       description:
-        "I sometimes draw pictures. (I'd like to study it properly sooner or later.)",
+        'たまにイラストを描いています。いずれはちゃんと勉強して上達させたい。',
     },
   ],
   projects: [
@@ -139,7 +141,7 @@ const personal: Personal = {
       repoUrl: 'https://github.com/h-yoshikawa44/ch-recipe-page',
     },
     {
-      img: '/projects/devchallenges/interiorconsultant.png',
+      img: '/projects/devchallenges/interior-consultant.png',
       tags: ['HTML', 'CSS', 'JavaScript'],
       name: 'Interior Consultant',
       description: (
@@ -184,4 +186,6 @@ const personal: Personal = {
   ],
 };
 
-export { personal };
+const tags = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React'];
+
+export { personal, tags };

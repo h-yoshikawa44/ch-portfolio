@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { css } from '@emotion/react';
 import { Blog } from '@/models/Blog';
 import Paper from '@/components/common/Paper';
-import { fonts, colors } from '@/styles/constants';
+import { breakPoint, fonts, colors } from '@/styles/constants';
 
 type Props = {
   blog: Blog;
@@ -52,6 +52,10 @@ const blogImgBlock = css`
   width: 100%;
   height: 304px;
   margin-top: 12px;
+
+  @media (max-width: ${breakPoint.md - 1}px) {
+    height: 240px;
+  }
 `;
 
 const blogTitle = css`

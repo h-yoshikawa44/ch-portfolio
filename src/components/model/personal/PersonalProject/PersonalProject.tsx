@@ -12,8 +12,8 @@ type Props = {
 
 const PersonalProject: VFC<Props> = ({ project }) => {
   return (
-    <div>
-      <Paper>
+    <Paper>
+      <div css={projectLayout}>
         <p css={projectImgBlock}>
           <Image
             css={projectImg}
@@ -39,10 +39,16 @@ const PersonalProject: VFC<Props> = ({ project }) => {
             Code
           </LinkButton>
         </div>
-      </Paper>
-    </div>
+      </div>
+    </Paper>
   );
 };
+
+const projectLayout = css`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`;
 
 const projectImgBlock = css`
   position: relative;
@@ -98,7 +104,7 @@ const projectLinkBlock = css`
   display: grid;
   grid-template-columns: repeat(2, minmax(min-content, 100%));
   gap: 4%;
-  margin-top: 40px;
+  margin-top: auto;
 `;
 
 export default PersonalProject;

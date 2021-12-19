@@ -53,7 +53,7 @@ const PersonalProfile: VFC<Props> = ({ profile, socialAccounts }) => {
 const profileCardLayout = css`
   display: flex;
 
-  @media (max-width: ${breakPoint.sm - 1}px) {
+  @media (max-width: ${breakPoint.md - 1}px) {
     flex-direction: column;
   }
 `;
@@ -66,20 +66,25 @@ const profileImgBlock = css`
   border: 1px solid #5c93bb2b;
   border-radius: 16px;
 
-  @media (max-width: ${breakPoint.sm - 1}px) {
+  @media (max-width: ${breakPoint.md - 1}px) {
     width: 100%;
   }
 `;
 
 const profileTextBlock = css`
+  width: 100%;
   margin-left: 24px;
+
+  @media (max-width: ${breakPoint.md - 1}px) {
+    margin-left: 0;
+  }
 `;
 
 const profileHeader = css`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: ${breakPoint.sm - 1}px) {
+  @media (max-width: ${breakPoint.md - 1}px) {
     flex-direction: column;
     margin-top: 20px;
   }
