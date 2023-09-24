@@ -17,12 +17,7 @@ const PersonalProfile: FC<Props> = ({ profile, socialAccounts }) => {
       <Paper>
         <div css={profileCardLayout}>
           <p css={profileImgBlock}>
-            <Image
-              src={profile.icon}
-              alt="My Icon"
-              layout="fill"
-              objectFit="contain"
-            />
+            <Image css={profileImg} src={profile.icon} alt="My Icon" fill />
           </p>
           <div css={profileTextBlock}>
             <div css={profileHeader}>
@@ -69,6 +64,10 @@ const profileImgBlock = css`
   @media (max-width: ${breakPoint.md - 1}px) {
     width: 100%;
   }
+`;
+
+const profileImg = css`
+  object-fit: contain;
 `;
 
 const profileTextBlock = css`

@@ -15,12 +15,7 @@ const BlogNewPost: FC<Props> = ({ blog }) => {
       <Paper>
         <h2 css={blogSectionTitle}>Blog</h2>
         <p css={blogImgBlock}>
-          <Image
-            src={blog.imgUrl}
-            alt={blog.title}
-            layout="fill"
-            objectFit="contain"
-          />
+          <Image css={blogImg} src={blog.imgUrl} alt={blog.title ?? ''} fill />
         </p>
         <h3 css={blogTitle}>{blog.title}</h3>
         <p css={blogDescription}>{blog.description}</p>
@@ -56,6 +51,10 @@ const blogImgBlock = css`
   @media (max-width: ${breakPoint.md - 1}px) {
     height: 240px;
   }
+`;
+
+const blogImg = css`
+  object-fit: contain;
 `;
 
 const blogTitle = css`

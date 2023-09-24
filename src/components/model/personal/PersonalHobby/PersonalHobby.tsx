@@ -20,10 +20,10 @@ const PersonalHobby: FC<Props> = ({ hobbies }) => {
               <div key={hobby.title}>
                 <p css={hobbyListItemImgBlock}>
                   <Image
+                    css={hobbyListItemImg}
                     src={hobby.img}
                     alt={hobby.title}
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                   />
                 </p>
                 <h4 css={hobbyListItemTitle}>{hobby.title}</h4>
@@ -61,6 +61,10 @@ const hobbyListItemImgBlock = css`
   height: 200px;
   border: 1px solid #5c93bb2b;
   border-radius: 16px;
+`;
+
+const hobbyListItemImg = css`
+  object-fit: contain;
 `;
 
 const hobbyListItemTitle = css`
