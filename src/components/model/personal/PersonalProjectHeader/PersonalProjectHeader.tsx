@@ -79,7 +79,10 @@ const projectTagButton = css`
   background-color: ${colors.white};
   border: 1px solid ${colors.gray2};
   border-radius: 12px;
-  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border 0.3s;
 
   &:hover,
   &:focus {

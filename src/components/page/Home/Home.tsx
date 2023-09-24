@@ -18,7 +18,7 @@ type Props = {
 
 const Home: FC<Props> = ({ blog }) => {
   const { filter, filterProjects, handleChangeFilter } = useProjectFilter(
-    personal.projects
+    personal.projects,
   );
 
   return (
