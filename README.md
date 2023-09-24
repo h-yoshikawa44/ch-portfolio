@@ -53,8 +53,8 @@
 Base
 - [Node.js](https://nodejs.org/)：18.17.1
 - [TypeScript](https://www.typescriptlang.org/)：4.5.2
-- [React](https://reactjs.org/)：17.0.2
-- [Next.js](https://nextjs.org/)：12.0.4
+- [React](https://reactjs.org/)：18.2.0
+- [Next.js](https://nextjs.org/)：13.5.2
 
 Other major libraries
 - [emotion](https://emotion.sh/)
