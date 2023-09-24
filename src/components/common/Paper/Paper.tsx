@@ -1,7 +1,11 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { css } from '@emotion/react';
 
-const Paper: FC = ({ children }) => {
+type Props = {
+  children: ReactNode;
+};
+
+const Paper: FC<Props> = ({ children }) => {
   return <div css={paper}>{children}</div>;
 };
 

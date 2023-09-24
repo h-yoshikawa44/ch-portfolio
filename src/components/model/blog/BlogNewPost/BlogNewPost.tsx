@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import { Blog } from '@/models/Blog';
@@ -9,7 +9,7 @@ type Props = {
   blog: Blog;
 };
 
-const BlogNewPost: VFC<Props> = ({ blog }) => {
+const BlogNewPost: FC<Props> = ({ blog }) => {
   return (
     <section>
       <Paper>

@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import { Profile, SocialAccount as SocialAccountType } from '@/models/Personal';
@@ -11,7 +11,7 @@ type Props = {
   socialAccounts: SocialAccountType[];
 };
 
-const PersonalProfile: VFC<Props> = ({ profile, socialAccounts }) => {
+const PersonalProfile: FC<Props> = ({ profile, socialAccounts }) => {
   return (
     <section>
       <Paper>

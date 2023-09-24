@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import { Project } from '@/models/Personal';
@@ -10,7 +10,7 @@ type Props = {
   project: Project;
 };
 
-const PersonalProject: VFC<Props> = ({ project }) => {
+const PersonalProject: FC<Props> = ({ project }) => {
   return (
     <Paper>
       <div css={projectLayout}>

@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import { css } from '@emotion/react';
 import { Blog } from '@/models/Blog';
 import PersonalProfile from '@/components/model/personal/PersonalProfile';
@@ -16,7 +16,7 @@ type Props = {
   blog: Blog;
 };
 
-const Home: VFC<Props> = ({ blog }) => {
+const Home: FC<Props> = ({ blog }) => {
   const { filter, filterProjects, handleChangeFilter } = useProjectFilter(
     personal.projects
   );

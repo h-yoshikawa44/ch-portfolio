@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import { css } from '@emotion/react';
 import Paper from '@/components/common/Paper';
 import { breakPoint, fonts, colors } from '@/styles/constants';
@@ -11,7 +11,7 @@ type Props = {
   onFilter: (tag: string) => void;
 };
 
-const ProjectHeader: VFC<Props> = ({ count, tags, filter, onFilter }) => {
+const ProjectHeader: FC<Props> = ({ count, tags, filter, onFilter }) => {
   return (
     <header>
       <Paper>

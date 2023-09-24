@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import Paper from '@/components/common/Paper';
@@ -9,7 +9,7 @@ type Props = {
   skills: Skill[];
 };
 
-const PersonalSkill: VFC<Props> = ({ skills }) => {
+const PersonalSkill: FC<Props> = ({ skills }) => {
   return (
     <section>
       <Paper>

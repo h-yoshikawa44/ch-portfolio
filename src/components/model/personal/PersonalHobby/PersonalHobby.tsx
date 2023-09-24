@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import { Hobby } from '@/models/Personal';
@@ -9,7 +9,7 @@ type Props = {
   hobbies: Hobby[];
 };
 
-const PersonalHobby: VFC<Props> = ({ hobbies }) => {
+const PersonalHobby: FC<Props> = ({ hobbies }) => {
   return (
     <section>
       <Paper>
