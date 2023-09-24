@@ -18,8 +18,8 @@
   },
   "dependencies": {
     "@emotion-icons/fa-brands": "^3.19.0",
-    "@emotion/react": "^11.7.0",
-    "@emotion/styled": "^11.6.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "csx": "^10.0.2",
     "focus-visible": "^5.2.0",
     "modern-css-reset": "^1.4.0",
