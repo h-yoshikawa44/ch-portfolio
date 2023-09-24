@@ -4,7 +4,7 @@ import { blogDescription } from '@/data/blog';
 
 const getBlogRss = async () => {
   const parser = new Parser();
-  const feed = await parser.parseURL('https://changeofpace.site/feed.xml');
+  const feed = await parser.parseURL('https://changeofpace.site/rss.xml');
 
   const newBlogPostData = feed.items.slice(0, 5);
   const newBlogPosts = newBlogPostData.map((post) => {
