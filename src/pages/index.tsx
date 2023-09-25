@@ -16,7 +16,7 @@ const Home: VFC<Props> = ({ blog }) => {
         <title>Portfolio</title>
         <meta
           name="description"
-          content="'devChallenges.io - Portfolio | by h-yoshikawa44'"
+          content="'devChallenges.io(legacy) - Portfolio | by h-yoshikawa44'"
         />
       </Head>
 
