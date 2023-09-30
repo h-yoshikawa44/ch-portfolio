@@ -66,7 +66,7 @@ const Home: FC<Props> = ({ blog }) => {
 const main = css`
   margin: 72px 0;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     margin: 24px 0 40px;
   }
 `;
@@ -76,7 +76,7 @@ const container = css`
   padding: 0 12%;
   margin: 0 auto;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     padding: 0 4%;
   }
 `;
@@ -84,7 +84,7 @@ const container = css`
 const sectionMarginTop = css`
   margin-top: 42px;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     margin-top: 24px;
   }
 `;
@@ -94,7 +94,7 @@ const centerSectionLayout = css`
   grid-template-columns: 0.4fr 0.6fr;
   column-gap: 2%;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     grid-template-columns: 1fr;
     row-gap: 24px;
   }
@@ -104,7 +104,7 @@ const centerSectionLeftBlockLayout = css`
   display: grid;
   row-gap: 42px;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     row-gap: 24px;
   }
 `;

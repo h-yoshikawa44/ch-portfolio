@@ -50,7 +50,7 @@ const projectTagBlock = css`
   flex-wrap: wrap;
   margin: calc(-16px + 16px) 0 0 -16px;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     margin: calc(-8px + 16px) 0 0 -8px;
   }
 `;
@@ -94,7 +94,7 @@ const projectTagButton = css`
     outline-color: transparent;
   }
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     margin-top: 8px;
     margin-left: 8px;
   }

@@ -1,7 +1,7 @@
 import { FC, ComponentPropsWithRef } from 'react';
 import Image from 'next/image';
 import { css } from '@emotion/react';
-import { fonts, colors } from '@/styles/constants';
+import { fonts, colors, breakPoint } from '@/styles/constants';
 
 type Props = ComponentPropsWithRef<'footer'>;
 
@@ -47,7 +47,7 @@ const footerText = css`
   font-weight: 500;
   line-height: 17px;
 
-  @media (max-width: 600px) {
+  @media (width < ${breakPoint.sm}px) {
     flex-direction: column;
     justify-content: space-around;
     height: 70px;

@@ -48,7 +48,7 @@ const blogImgBlock = css`
   height: 304px;
   margin-top: 12px;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     height: 240px;
   }
 `;
