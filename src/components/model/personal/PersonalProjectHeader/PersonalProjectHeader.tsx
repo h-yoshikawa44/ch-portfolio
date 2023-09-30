@@ -90,7 +90,7 @@ const projectTagButton = css`
     background-color: ${createRGBAColor(colors.black, 0.1)};
   }
 
-  &:not(.focus-visible) {
+  &:not(:focus-visible) {
     outline-color: transparent;
   }
 

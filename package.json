@@ -18,7 +18,9 @@
   },
   "dependencies": {
     "@emotion-icons/fa-brands": "^3.19.0",
+    "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.1",
+    "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "csx": "^10.0.2",
     "focus-visible": "^5.2.0",
@@ -38,6 +40,8 @@
     "eslint-config-next": "^13.5.2",
     "eslint-config-prettier": "^9.0.0",
     "lint-staged": "^12.1.2",
+    "postcss": "^8.4.31",
+    "postcss-preset-env": "^9.1.4",
     "postcss-styled-syntax": "^0.5.0",
     "prettier": "^3.0.3",
     "simple-git-hooks": "^2.7.0",
