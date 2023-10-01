@@ -58,8 +58,8 @@ Base
 
 Other major libraries
 - [emotion](https://emotion.sh/)
-- [csx](https://typestyle.github.io/#/colors)
-- [focus-visible](https://github.com/WICG/focus-visible)
+- [polished](https://polished.js.org/)
+- [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env)
 - [rss-parser](https://github.com/rbren/rss-parser)
 
 ## Features
