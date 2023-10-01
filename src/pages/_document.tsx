@@ -9,13 +9,8 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin=""
-          />
           <link rel="icon" href="/favicon.ico" />
+          <meta name="robots" content="noindex, nofollow" />
         </Head>
         <body>
           <Main />

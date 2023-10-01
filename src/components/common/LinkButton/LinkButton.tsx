@@ -1,7 +1,8 @@
 import { FC, ComponentPropsWithRef } from 'react';
 import { darken, rgba } from 'polished';
 import { css } from '@emotion/react';
-import { fonts, colors, colorRatios } from '@/styles/constants';
+import { colors, colorRatios } from '@/styles/constants';
+import { montserrat } from '@/styles/fonts';
 
 type Props = ComponentPropsWithRef<'a'> & {
   variants?: 'contained' | 'outlined';
@@ -31,7 +32,7 @@ const linkButton = css`
   align-items: center;
   justify-content: center;
   padding: 12px 32px;
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 18px;
   font-style: normal;
   font-weight: 500;

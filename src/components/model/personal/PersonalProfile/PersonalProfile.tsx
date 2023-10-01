@@ -4,7 +4,8 @@ import { css } from '@emotion/react';
 import { Profile, SocialAccount as SocialAccountType } from '@/models/Personal';
 import Paper from '@/components/common/Paper';
 import SocialAccount from '@/components/common/SocialAccount';
-import { breakPoint, fonts, colors } from '@/styles/constants';
+import { breakPoint, colors } from '@/styles/constants';
+import { montserrat } from '@/styles/fonts';
 
 type Props = {
   profile: Profile;
@@ -90,7 +91,7 @@ const profileHeader = css`
 `;
 
 const profileName = css`
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -99,7 +100,7 @@ const profileName = css`
 `;
 
 const profileRole = css`
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -119,7 +120,7 @@ const profileAccountList = css`
 
 const profileAccount = css`
   margin-bottom: 4px;
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -133,7 +134,7 @@ const profileAccount = css`
 
 const profileDescription = css`
   margin-top: 32px;
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
