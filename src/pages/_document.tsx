@@ -10,6 +10,7 @@ class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <link rel="icon" href="/favicon.ico" />
+          <meta name="robots" content="noindex, nofollow" />
         </Head>
         <body>
           <Main />
