@@ -3,7 +3,8 @@ import Image from 'next/image';
 import { css } from '@emotion/react';
 import { Hobby } from '@/models/Personal';
 import Paper from '@/components/common/Paper';
-import { fonts, colors } from '@/styles/constants';
+import { colors } from '@/styles/constants';
+import { montserrat } from '@/styles/fonts';
 
 type Props = {
   hobbies: Hobby[];
@@ -38,7 +39,7 @@ const PersonalHobby: FC<Props> = ({ hobbies }) => {
 };
 
 const hobbySectionTitle = css`
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -69,7 +70,7 @@ const hobbyListItemImg = css`
 
 const hobbyListItemTitle = css`
   margin-top: 24px;
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -79,7 +80,7 @@ const hobbyListItemTitle = css`
 
 const hobbyListItemDescription = css`
   margin-top: 8px;
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

@@ -13,13 +13,6 @@ export const breakPoint = {
   xl,
 } as const;
 
-// フォント
-const montserrat = 'Montserrat';
-
-export const fonts = {
-  montserrat,
-} as const;
-
 // 色
 const black = '#333333';
 const gray2 = '#4F4F4F';

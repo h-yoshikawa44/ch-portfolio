@@ -3,7 +3,8 @@ import Image from 'next/image';
 import { css } from '@emotion/react';
 import { Blog } from '@/models/Blog';
 import Paper from '@/components/common/Paper';
-import { breakPoint, fonts, colors } from '@/styles/constants';
+import { breakPoint, colors } from '@/styles/constants';
+import { montserrat } from '@/styles/fonts';
 
 type Props = {
   blog: Blog;
@@ -34,7 +35,7 @@ const BlogNewPost: FC<Props> = ({ blog }) => {
 };
 
 const blogSectionTitle = css`
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -59,7 +60,7 @@ const blogImg = css`
 
 const blogTitle = css`
   margin-top: 16px;
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -69,7 +70,7 @@ const blogTitle = css`
 
 const blogDescription = css`
   margin-top: 12px;
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -90,7 +91,7 @@ const blogPostListItem = css`
 `;
 
 const blogPostListItemLink = css`
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

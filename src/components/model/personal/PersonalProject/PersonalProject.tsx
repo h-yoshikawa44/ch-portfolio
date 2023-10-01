@@ -4,7 +4,8 @@ import { css } from '@emotion/react';
 import { Project } from '@/models/Personal';
 import Paper from '@/components/common/Paper';
 import LinkButton from '@/components/common/LinkButton';
-import { fonts, colors } from '@/styles/constants';
+import { colors } from '@/styles/constants';
+import { montserrat } from '@/styles/fonts';
 
 type Props = {
   project: Project;
@@ -64,7 +65,7 @@ const projectTagList = css`
 
 const projectTagListItem = css`
   margin-right: 8px;
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -77,7 +78,7 @@ const projectTagListItem = css`
 `;
 
 const projectName = css`
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -87,7 +88,7 @@ const projectName = css`
 
 const projectDescription = css`
   margin-top: 16px;
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

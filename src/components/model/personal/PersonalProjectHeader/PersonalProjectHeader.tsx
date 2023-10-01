@@ -2,7 +2,8 @@ import { FC } from 'react';
 import { css } from '@emotion/react';
 import { rgba } from 'polished';
 import Paper from '@/components/common/Paper';
-import { breakPoint, fonts, colors, colorRatios } from '@/styles/constants';
+import { breakPoint, colors, colorRatios } from '@/styles/constants';
+import { montserrat } from '@/styles/fonts';
 
 type Props = {
   count: number;
@@ -37,7 +38,7 @@ const ProjectHeader: FC<Props> = ({ count, tags, filter, onFilter }) => {
 };
 
 const projectHeaderTitle = css`
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -70,7 +71,7 @@ const projectTagButton = css`
   padding: 8px 24px;
   margin-top: 16px;
   margin-left: 16px;
-  font-family: ${fonts.montserrat};
+  font-family: ${montserrat.style.fontFamily};
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
