@@ -44,3 +44,11 @@ export const colors = {
   link,
   border,
 } as const;
+
+const buttonDarken = 0.2;
+const buttonAlpha = 0.1;
+
+export const colorRatios = {
+  buttonDarken,
+  buttonAlpha,
+} as const;

@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { css } from '@emotion/react';
+import { rgba } from 'polished';
 import Paper from '@/components/common/Paper';
-import { breakPoint, fonts, colors } from '@/styles/constants';
-import { createRGBAColor } from '@/lib/csx';
+import { breakPoint, fonts, colors, colorRatios } from '@/styles/constants';
 
 type Props = {
   count: number;
@@ -86,8 +86,7 @@ const projectTagButton = css`
 
   &:hover,
   &:focus {
-    /* stylelint-disable-next-line function-name-case */
-    background-color: ${createRGBAColor(colors.black, 0.1)};
+    background-color: ${rgba(colors.black, colorRatios.buttonAlpha)};
   }
 
   &:not(:focus-visible) {
