@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import { Profile, SocialAccount as SocialAccountType } from '@/models/Personal';
@@ -11,18 +11,13 @@ type Props = {
   socialAccounts: SocialAccountType[];
 };
 
-const PersonalProfile: VFC<Props> = ({ profile, socialAccounts }) => {
+const PersonalProfile: FC<Props> = ({ profile, socialAccounts }) => {
   return (
     <section>
       <Paper>
         <div css={profileCardLayout}>
           <p css={profileImgBlock}>
-            <Image
-              src={profile.icon}
-              alt="My Icon"
-              layout="fill"
-              objectFit="contain"
-            />
+            <Image css={profileImg} src={profile.icon} alt="My Icon" fill />
           </p>
           <div css={profileTextBlock}>
             <div css={profileHeader}>
@@ -53,7 +48,7 @@ const PersonalProfile: VFC<Props> = ({ profile, socialAccounts }) => {
 const profileCardLayout = css`
   display: flex;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     flex-direction: column;
   }
 `;
@@ -66,16 +61,20 @@ const profileImgBlock = css`
   border: 1px solid #5c93bb2b;
   border-radius: 16px;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     width: 100%;
   }
+`;
+
+const profileImg = css`
+  object-fit: contain;
 `;
 
 const profileTextBlock = css`
   width: 100%;
   margin-left: 24px;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     margin-left: 0;
   }
 `;
@@ -84,7 +83,7 @@ const profileHeader = css`
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     flex-direction: column;
     margin-top: 20px;
   }
@@ -113,7 +112,7 @@ const profileAccountList = css`
   margin: 0;
   list-style: none;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     margin-top: 16px;
   }
 `;
@@ -141,7 +140,7 @@ const profileDescription = css`
   line-height: 22px;
   color: ${colors.gray3};
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     margin-top: 20px;
   }
 `;

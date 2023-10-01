@@ -11,14 +11,14 @@ export const breakPoint = {
   md,
   lg,
   xl,
-};
+} as const;
 
 // フォント
 const montserrat = 'Montserrat';
 
 export const fonts = {
   montserrat,
-};
+} as const;
 
 // 色
 const black = '#333333';
@@ -43,4 +43,12 @@ export const colors = {
   blue,
   link,
   border,
-};
+} as const;
+
+const buttonDarken = 0.2;
+const buttonAlpha = 0.1;
+
+export const colorRatios = {
+  buttonDarken,
+  buttonAlpha,
+} as const;

@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import { Hobby } from '@/models/Personal';
@@ -9,7 +9,7 @@ type Props = {
   hobbies: Hobby[];
 };
 
-const PersonalHobby: VFC<Props> = ({ hobbies }) => {
+const PersonalHobby: FC<Props> = ({ hobbies }) => {
   return (
     <section>
       <Paper>
@@ -20,10 +20,10 @@ const PersonalHobby: VFC<Props> = ({ hobbies }) => {
               <div key={hobby.title}>
                 <p css={hobbyListItemImgBlock}>
                   <Image
+                    css={hobbyListItemImg}
                     src={hobby.img}
                     alt={hobby.title}
-                    layout="fill"
-                    objectFit="contain"
+                    fill
                   />
                 </p>
                 <h4 css={hobbyListItemTitle}>{hobby.title}</h4>
@@ -61,6 +61,10 @@ const hobbyListItemImgBlock = css`
   height: 200px;
   border: 1px solid #5c93bb2b;
   border-radius: 16px;
+`;
+
+const hobbyListItemImg = css`
+  object-fit: contain;
 `;
 
 const hobbyListItemTitle = css`

@@ -20,7 +20,7 @@ const useProjectFilter = (projects: Project[]) => {
     (tag: string) => {
       tag === filter ? setFilter('') : setFilter(tag);
     },
-    [filter]
+    [filter],
   );
 
   return { filter, filterProjects, handleChangeFilter };

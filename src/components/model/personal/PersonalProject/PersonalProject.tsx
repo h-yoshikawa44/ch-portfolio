@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import { Project } from '@/models/Personal';
@@ -10,18 +10,12 @@ type Props = {
   project: Project;
 };
 
-const PersonalProject: VFC<Props> = ({ project }) => {
+const PersonalProject: FC<Props> = ({ project }) => {
   return (
     <Paper>
       <div css={projectLayout}>
         <p css={projectImgBlock}>
-          <Image
-            css={projectImg}
-            src={project.img}
-            alt={project.name}
-            layout="fill"
-            objectFit="contain"
-          />
+          <Image css={projectImg} src={project.img} alt={project.name} fill />
         </p>
         <ul css={projectTagList}>
           {project.tags.map((tag) => (
@@ -58,6 +52,7 @@ const projectImgBlock = css`
 
 const projectImg = css`
   border-radius: 12px;
+  object-fit: contain;
 `;
 
 const projectTagList = css`

@@ -1,8 +1,8 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import { css } from '@emotion/react';
+import { rgba } from 'polished';
 import Paper from '@/components/common/Paper';
-import { breakPoint, fonts, colors } from '@/styles/constants';
-import { createRGBAColor } from '@/lib/csx';
+import { breakPoint, fonts, colors, colorRatios } from '@/styles/constants';
 
 type Props = {
   count: number;
@@ -11,7 +11,7 @@ type Props = {
   onFilter: (tag: string) => void;
 };
 
-const ProjectHeader: VFC<Props> = ({ count, tags, filter, onFilter }) => {
+const ProjectHeader: FC<Props> = ({ count, tags, filter, onFilter }) => {
   return (
     <header>
       <Paper>
@@ -50,7 +50,7 @@ const projectTagBlock = css`
   flex-wrap: wrap;
   margin: calc(-16px + 16px) 0 0 -16px;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     margin: calc(-8px + 16px) 0 0 -8px;
   }
 `;
@@ -79,19 +79,21 @@ const projectTagButton = css`
   background-color: ${colors.white};
   border: 1px solid ${colors.gray2};
   border-radius: 12px;
-  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border 0.3s;
 
   &:hover,
   &:focus {
-    /* stylelint-disable-next-line function-name-case */
-    background-color: ${createRGBAColor(colors.black, 0.1)};
+    background-color: ${rgba(colors.black, colorRatios.buttonAlpha)};
   }
 
-  &:not(.focus-visible) {
+  &:not(:focus-visible) {
     outline-color: transparent;
   }
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     margin-top: 8px;
     margin-left: 8px;
   }

@@ -1,7 +1,7 @@
 import { FC, ComponentPropsWithRef } from 'react';
+import { darken, rgba } from 'polished';
 import { css } from '@emotion/react';
-import { fonts, colors } from '@/styles/constants';
-import { createRGBAColor, createDarkenColor } from '@/lib/csx';
+import { fonts, colors, colorRatios } from '@/styles/constants';
 
 type Props = ComponentPropsWithRef<'a'> & {
   variants?: 'contained' | 'outlined';
@@ -45,8 +45,7 @@ const linkButtonContained = css`
   background-color: ${colors.blue};
 
   &:hover {
-    /* stylelint-disable-next-line function-name-case */
-    background-color: ${createDarkenColor(colors.blue, 0.2)};
+    background-color: ${darken(colorRatios.buttonDarken, colors.blue)};
   }
 `;
 
@@ -56,8 +55,7 @@ const linkButtonOutlined = css`
   border: 1px solid ${colors.blue};
 
   &:hover {
-    /* stylelint-disable-next-line function-name-case */
-    background-color: ${createRGBAColor(colors.black, 0.1)};
+    background-color: ${rgba(colors.black, colorRatios.buttonAlpha)};
   }
 `;
 

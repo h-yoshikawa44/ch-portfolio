@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { Blog } from '@/models/Blog';
@@ -9,7 +9,7 @@ type Props = {
   blog: Blog;
 };
 
-const Home: VFC<Props> = ({ blog }) => {
+const Home: FC<Props> = ({ blog }) => {
   return (
     <div>
       <Head>

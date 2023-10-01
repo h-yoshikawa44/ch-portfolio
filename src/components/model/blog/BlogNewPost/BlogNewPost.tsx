@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import { Blog } from '@/models/Blog';
@@ -9,18 +9,13 @@ type Props = {
   blog: Blog;
 };
 
-const BlogNewPost: VFC<Props> = ({ blog }) => {
+const BlogNewPost: FC<Props> = ({ blog }) => {
   return (
     <section>
       <Paper>
         <h2 css={blogSectionTitle}>Blog</h2>
         <p css={blogImgBlock}>
-          <Image
-            src={blog.imgUrl}
-            alt={blog.title}
-            layout="fill"
-            objectFit="contain"
-          />
+          <Image css={blogImg} src={blog.imgUrl} alt={blog.title ?? ''} fill />
         </p>
         <h3 css={blogTitle}>{blog.title}</h3>
         <p css={blogDescription}>{blog.description}</p>
@@ -53,9 +48,13 @@ const blogImgBlock = css`
   height: 304px;
   margin-top: 12px;
 
-  @media (max-width: ${breakPoint.md - 1}px) {
+  @media (width < ${breakPoint.md}px) {
     height: 240px;
   }
+`;
+
+const blogImg = css`
+  object-fit: contain;
 `;
 
 const blogTitle = css`

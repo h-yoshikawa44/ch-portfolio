@@ -1,4 +1,4 @@
-import { VFC, Fragment } from 'react';
+import { FC, Fragment } from 'react';
 import { css } from '@emotion/react';
 import { Github } from '@emotion-icons/fa-brands/Github';
 import { Twitter } from '@emotion-icons/fa-brands/Twitter';
@@ -10,7 +10,7 @@ type Props = {
   accountID: string;
 };
 
-const SocialAccount: VFC<Props> = ({ type, iconSize, accountID }) => {
+const SocialAccount: FC<Props> = ({ type, iconSize, accountID }) => {
   return (
     <Fragment>
       {type === 'github' && (
