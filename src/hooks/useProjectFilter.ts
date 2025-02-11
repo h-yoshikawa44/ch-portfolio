@@ -18,7 +18,11 @@ const useProjectFilter = (projects: Project[]) => {
 
   const handleChangeFilter = useCallback(
     (tag: string) => {
-      tag === filter ? setFilter('') : setFilter(tag);
+      if (tag === filter) {
+        setFilter('');
+      } else {
+        setFilter(tag);
+      }
     },
     [filter],
   );
