@@ -28,6 +28,8 @@ MyDocument.getInitialProps = async (ctx) => {
 
   ctx.renderPage = () =>
     originalRenderPage({
+      // AppType だと emotionCache がエラーになってしまう...
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       enhanceApp: (App: any) => (props) => (
         <App emotionCache={cache} {...props} />
       ),

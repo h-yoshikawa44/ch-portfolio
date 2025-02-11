@@ -25,7 +25,7 @@ const Home: FC<Props> = ({ blog }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (_context) => {
   const blog = await getBlogRss();
 
   return {

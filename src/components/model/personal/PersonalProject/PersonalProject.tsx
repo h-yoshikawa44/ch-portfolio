@@ -52,8 +52,8 @@ const projectImgBlock = css`
 `;
 
 const projectImg = css`
-  border-radius: 12px;
   object-fit: contain;
+  border-radius: 12px;
 `;
 
 const projectTagList = css`
