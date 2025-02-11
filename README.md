@@ -3,7 +3,7 @@
 <h1 align="center">Portfolio</h1>
 
 <div align="center">
-   Solution for a challenge from  <a href="http://legacy.devchallenges.io" target="_blank">Devchallenges.io</a>.
+   Solution for a challenge from Devchallenges.io.
 </div>
 
 <div align="center">
@@ -11,16 +11,11 @@
     <a href="https://ch-portfolio.vercel.app/">
       Demo
     </a>
-    <span> | </span>
-    <a href="https://legacy.devchallenges.io/solutions/FXqFVnJSWiGwUVT1RHb6">
-      Solution
-    </a>
-    <span> | </span>
-    <a href="https://legacy.devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt">
-      Challenge
-    </a>
   </h3>
 </div>
+
+*The site is now closed, but this assignment was originally posted at `https://legacy.devchallenges.io/solutions/FXqFVnJSWiGwUVT1RHb6`.  
+（My assignment submission page at the time: `https://legacy.devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt`.）
 
 <!-- TABLE OF CONTENTS -->
 
@@ -57,16 +52,16 @@ Base
 - [Next.js](https://nextjs.org/)：15.1.7
 
 Other major libraries
+- [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env)
 - [emotion](https://emotion.sh/)
 - [polished](https://polished.js.org/)
-- [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env)
 - [rss-parser](https://github.com/rbren/rss-parser)
 
 ## Features
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
-This application/site was created as a submission to a [DevChallenges](https://legacy.devchallenges.io/challenges) challenge. The [challenge](https://legacy.devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt) was to build an application to complete the given user stories.
+This application/site was created as a submission to a DevChallenges challenge. The challenge was to build an application to complete the given user stories.
 
 - [x] User story: I can see personal details
 - [x] User story: I can see skills
@@ -110,4 +105,4 @@ npm run dev
 
 - Website：[h-yoshikawa44.com](https://h-yoshikawa44.com)
 - GitHub：[@h-yoshikawa44](https://github.com/h-yoshikawa44)
-- Twitter：[@yoshi44_lion](https://twitter.com/yoshi44_lion)
+- X：[@yoshi44_lion](https://x.com/yoshi44_lion)
