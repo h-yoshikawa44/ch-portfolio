@@ -38,7 +38,8 @@ export const colors = {
   border,
 } as const;
 
-const buttonDarken = 0.2;
+// @ctrl/tinycolor の darken は 0〜100 で指定
+const buttonDarken = 20;
 const buttonAlpha = 0.1;
 
 export const colorRatios = {

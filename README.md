@@ -55,7 +55,7 @@ Base
 Other major libraries
 - [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env)
 - [emotion](https://emotion.sh/)
-- [polished](https://polished.js.org/)
+- [@ctrl/tinycolor](https://tinycolor.vercel.app/)
 - [rss-parser](https://github.com/rbren/rss-parser)
 
 ## Features

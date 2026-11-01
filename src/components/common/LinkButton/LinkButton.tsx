@@ -1,5 +1,5 @@
 import { FC, ComponentPropsWithRef } from 'react';
-import { darken, rgba } from 'polished';
+import { TinyColor } from '@ctrl/tinycolor';
 import { css } from '@emotion/react';
 import { colors, colorRatios } from '@/styles/constants';
 import { montserrat } from '@/styles/fonts';
@@ -46,7 +46,9 @@ const linkButtonContained = css`
   background-color: ${colors.blue};
 
   &:hover {
-    background-color: ${darken(colorRatios.buttonDarken, colors.blue)};
+    background-color: ${new TinyColor(colors.blue)
+      .darken(colorRatios.buttonDarken)
+      .toHexString()};
   }
 `;
 
@@ -56,7 +58,9 @@ const linkButtonOutlined = css`
   border: 1px solid ${colors.blue};
 
   &:hover {
-    background-color: ${rgba(colors.black, colorRatios.buttonAlpha)};
+    background-color: ${new TinyColor(colors.black)
+      .setAlpha(colorRatios.buttonAlpha)
+      .toRgbString()};
   }
 `;
 

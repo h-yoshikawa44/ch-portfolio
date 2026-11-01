@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { css } from '@emotion/react';
-import { rgba } from 'polished';
+import { TinyColor } from '@ctrl/tinycolor';
 import Paper from '@/components/common/Paper';
 import { breakPoint, colors, colorRatios } from '@/styles/constants';
 import { montserrat } from '@/styles/fonts';
@@ -87,7 +87,9 @@ const projectTagButton = css`
 
   &:hover,
   &:focus {
-    background-color: ${rgba(colors.black, colorRatios.buttonAlpha)};
+    background-color: ${new TinyColor(colors.black)
+      .setAlpha(colorRatios.buttonAlpha)
+      .toRgbString()};
   }
 
   &:not(:focus-visible) {
