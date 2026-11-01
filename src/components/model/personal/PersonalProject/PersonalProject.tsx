@@ -16,7 +16,13 @@ const PersonalProject: FC<Props> = ({ project }) => {
     <Paper>
       <div css={projectLayout}>
         <p css={projectImgBlock}>
-          <Image css={projectImg} src={project.img} alt={project.name} fill />
+          <Image
+            css={projectImg}
+            src={project.img}
+            alt={project.name}
+            fill
+            sizes="248px"
+          />
         </p>
         <ul css={projectTagList}>
           {project.tags.map((tag) => (

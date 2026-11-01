@@ -16,7 +16,14 @@ const BlogNewPost: FC<Props> = ({ blog }) => {
       <Paper>
         <h2 css={blogSectionTitle}>Blog</h2>
         <p css={blogImgBlock}>
-          <Image css={blogImg} src={blog.imgUrl} alt={blog.title ?? ''} fill />
+          <Image
+            css={blogImg}
+            src={blog.imgUrl}
+            alt={blog.title ?? ''}
+            fill
+            sizes="(max-width: 959px) 100vw, 60vw"
+            loading="eager"
+          />
         </p>
         <h3 css={blogTitle}>{blog.title}</h3>
         <p css={blogDescription}>{blog.description}</p>

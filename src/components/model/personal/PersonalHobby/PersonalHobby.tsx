@@ -25,6 +25,7 @@ const PersonalHobby: FC<Props> = ({ hobbies }) => {
                     src={hobby.img}
                     alt={hobby.title}
                     fill
+                    sizes="(max-width: 959px) 100vw, 40vw"
                   />
                 </p>
                 <h4 css={hobbyListItemTitle}>{hobby.title}</h4>

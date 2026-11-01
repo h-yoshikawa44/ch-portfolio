@@ -18,7 +18,13 @@ const PersonalProfile: FC<Props> = ({ profile, socialAccounts }) => {
       <Paper>
         <div css={profileCardLayout}>
           <p css={profileImgBlock}>
-            <Image css={profileImg} src={profile.icon} alt="My Icon" fill />
+            <Image
+              css={profileImg}
+              src={profile.icon}
+              alt="My Icon"
+              fill
+              sizes="(max-width: 959px) 100vw, 240px"
+            />
           </p>
           <div css={profileTextBlock}>
             <div css={profileHeader}>
