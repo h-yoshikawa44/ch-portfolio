@@ -49,7 +49,7 @@ Base
 - [Node.js](https://nodejs.org/)：26.13.0
 - [TypeScript](https://www.typescriptlang.org/)：5.9.3
 - [React](https://reactjs.org/)：19.3.1
-- [Next.js](https://nextjs.org/)：16.1.6
+- [Next.js](https://nextjs.org/)：16.4.3
   - Pages Router
 
 Other major libraries
