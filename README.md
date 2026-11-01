@@ -46,17 +46,17 @@
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 Base
-- [Node.js](https://nodejs.org/)：24.14.0
-- [TypeScript](https://www.typescriptlang.org/)：5.9.3
-- [React](https://reactjs.org/)：19.2.4
-- [Next.js](https://nextjs.org/)：16.1.6
+- [Node.js](https://nodejs.org/)：26.13.0
+- [TypeScript](https://www.typescriptlang.org/)：6.0.3
+- [React](https://reactjs.org/)：19.3.1
+- [Next.js](https://nextjs.org/)：16.4.3
   - Pages Router
 
 Other major libraries
 - [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env)
 - [emotion](https://emotion.sh/)
-- [polished](https://polished.js.org/)
-- [rss-parser](https://github.com/rbren/rss-parser)
+- [@ctrl/tinycolor](https://tinycolor.vercel.app/)
+- [@extractus/feed-extractor](https://github.com/extractus/feed-extractor)
 
 ## Features
 

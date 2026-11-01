@@ -1,12 +1,11 @@
-import Parser from 'rss-parser';
+import { extract } from '@extractus/feed-extractor';
 import { Blog } from '@/models/Blog';
 import { blogDescription } from '@/data/blog';
 
 const getBlogRss = async () => {
-  const parser = new Parser();
-  const feed = await parser.parseURL('https://changeofpace.site/rss/index.xml');
+  const feed = await extract('https://changeofpace.site/rss/index.xml');
 
-  const newBlogPostData = feed.items.slice(0, 5);
+  const newBlogPostData = (feed.entries ?? []).slice(0, 5);
   const newBlogPosts = newBlogPostData.map((post) => {
     return { title: post.title, link: post.link };
   });
